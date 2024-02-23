@@ -1,0 +1,43 @@
+body
+{
+   background-color: rgb(70, 89, 89);
+   color: white;
+}
+.navbar
+{
+    text-align: center;
+}
+.sort-btn
+{
+    display: flex;
+    justify-content: space-between;
+}
+button
+{
+    padding: 1em;
+    color: white;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 2px solid greenyellow;
+    cursor:pointer;
+    margin: 10px;
+}
+
+button:hover
+{
+    background-color:aquamarine;
+    color: black;
+    transition: 0.5s ease-in;
+}
+#sort-bar
+{
+   display: flex;
+   justify-content: center;
+}
+.bar 
+{
+    width: 10px;
+    background-color: yellow;
+    margin: 2px;
+}
+
