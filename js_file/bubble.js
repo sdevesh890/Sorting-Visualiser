@@ -1,11 +1,10 @@
 function swap(array, i, j) {
-    const temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
+    const tempHeight = array[i].style.height;
+    array[i].style.height = array[j].style.height;
+    array[j].style.height = tempHeight;
 }
 
-async function bubbleSort()
-{
+async function bubbleSort() {
     const bars = document.querySelectorAll('.bar');
     const array = Array.from(bars).map(bar => parseInt(bar.style.height));
 
@@ -19,10 +18,10 @@ async function bubbleSort()
             await new Promise(resolve => setTimeout(resolve, 50));
 
             if (array[j] > array[j + 1]) {
-                // Swap the bars
-                swap(array, j, j + 1);
-                bars[j].style.height = `${array[j]}px`;
-                bars[j + 1].style.height = `${array[j + 1]}px`;
+                // Swap the heights
+                swap(bars, j, j + 1);
+                // Update the array after swapping
+                [array[j], array[j + 1]] = [array[j + 1], array[j]];
             }
 
             // Reset color after comparison

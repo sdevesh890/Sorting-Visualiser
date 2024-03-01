@@ -30,5 +30,5 @@ async function insertionSort()
 document.getElementById('insertion_sort').addEventListener('click',async (e)=>
 {
     e.preventDefault();
-    await insertionSort();
+    insertionSort();
 })
